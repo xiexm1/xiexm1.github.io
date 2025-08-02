@@ -1,0 +1,122 @@
+/* style.css */
+body {
+  font-family: 'Helvetica Neue', Arial, sans-serif;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  color: #333;
+  background-color: #f9f9f9;
+}
+
+.container {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
+
+header {
+  text-align: center;
+  padding: 20px 0;
+  border-bottom: 1px solid #ccc;
+}
+.logo {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-bottom: 10px;
+}
+.logo img {
+  height: 80px;
+  margin-right: 20px;
+}
+
+.main-content {
+  flex: 1;
+}
+
+.subtitle {
+  margin-top: 10px;
+  font-size: 1.2em;
+  color: #666;
+}
+
+nav {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  background-color: #f0f0f0;
+  padding: 10px 0;
+  border-radius: 8px;
+  box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+  transition: background-color 0.3s;
+}
+nav a {
+  margin: 0 20px;
+  padding: 8px 12px;
+  font-size: 1.1em;
+  text-decoration: none;
+  color: #007bff;
+  border-radius: 4px;
+  transition: background-color 0.3s, color 0.3s, transform 0.2s;
+}
+nav a:hover {
+  color: #fff;
+  background-color: #007bff;
+  transform: scale(1.05);
+}
+nav a:active {
+  transform: scale(0.98);
+}
+
+
+.main-content {
+  padding: 20px;
+  text-align: center;
+}
+.database-link {
+  font-size: 1.2em;
+  margin-bottom: 20px;
+}
+.database-link img {
+  vertical-align: middle;
+  height: 50px;
+  margin-right: 10px;
+}
+.flowchart {
+  max-width: 80%;
+  height: auto;
+  margin-bottom: 20px;
+  box-shadow: 0 4px 8px rgba(0,0,0,0.1); /* add subtle shadow */
+  border-radius: 8px;
+}
+
+
+.citation {
+  text-align: left;
+  margin-top: 20px;
+  padding: 15px;
+  border-top: 1px solid #ccc;
+  background-color: #fff;
+  border-radius: 8px;
+}
+
+footer {
+  width: 100%;
+  padding: 10px 0;
+  background-color: #fff;
+  border-top: 1px solid #ccc;
+  text-align: center;
+  font-size: 0.75em;
+}
+.footer-logos {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-bottom: 15px;
+}
+.footer-logos img {
+  height: 60px;
+  margin: 0 15px;
+}
