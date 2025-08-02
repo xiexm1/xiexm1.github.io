@@ -120,3 +120,74 @@ footer {
   height: 60px;
   margin: 0 15px;
 }
+
+@media (max-width: 768px) {
+  .container {
+    padding: 0 10px;
+    max-width: 100%;
+  }
+
+  header {
+    padding: 15px 0;
+  }
+
+  .logo img {
+    height: 60px;
+    margin-right: 10px;
+  }
+
+  .subtitle {
+    font-size: 1em;
+    margin: 5px 0 15px 0;
+    padding: 0 10px;
+  }
+
+  nav {
+    padding: 8px 5px;
+    flex-wrap: wrap;
+  }
+  nav a {
+    margin: 5px 8px;
+    font-size: 1em;
+    padding: 6px 10px;
+  }
+
+  .main-content {
+    padding: 15px 10px;
+  }
+
+  .database-link img,
+  .flowchart {
+    max-width: 100%;
+    height: auto;
+  }
+  .database-link {
+    font-size: 1em;
+    margin-bottom: 15px;
+    word-break: break-word;
+  }
+  .flowchart {
+    max-width: 100%;
+  }
+
+  .citation {
+    font-size: 0.9em;
+    padding: 10px;
+  }
+
+  footer {
+    font-size: 0.7em;
+    padding: 15px 10px;
+  }
+  .footer-logos {
+    flex-direction: column;
+    margin-bottom: 10px;
+  }
+  .footer-logos a {
+    margin: 5px 0;
+  }
+  .footer-logos img {
+    height: 50px;
+    margin: 5px 0;
+  }
+}
