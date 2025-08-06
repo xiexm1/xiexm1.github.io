@@ -1,7 +1,7 @@
 /* assets/custom.css */
 
 .app-name-link img {
-    width: 150px; /* 把logo宽度设置为100px，你可以根据需要修改这个值 */
-    height: auto;  /* 保持纵横比 */
+    width: 150px;
+    height: auto;
   }
   
