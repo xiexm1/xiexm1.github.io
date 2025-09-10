@@ -8,6 +8,10 @@
     <link href="https://cdn.jsdelivr.net/npm/font-awesome@4.7.0/css/font-awesome.min.css" rel="stylesheet">
     <!-- Chart.js -->
     <script src="https://cdn.jsdelivr.net/npm/chart.js@4.4.8/dist/chart.umd.min.js"></script>
+    <!-- Publications Script -->
+    <script src="assets/js/publications.js" defer></script>
+    <!-- Content Script -->
+    <script src="assets/js/content.js" type="module" defer></script>
     
     <!-- Tailwind Configuration -->
     <script>
@@ -128,20 +132,10 @@
                 </p>
                 
                 <h3 class="text-xl font-semibold mb-4 text-primary">Education Background</h3>
-                <div class="space-y-6">
-                    <div class="flex">
-                        <div class="mr-6 text-primary font-semibold">2020-Present</div>
-                        <div>
-                            <h4 class="font-semibold text-lg">Phd in Crop genetics and breeding</h4>
-                            <p class="text-gray-600">China Agricultural University | Advisor: Prof. Weilong Guo</p>
-                        </div>
-                    </div>
-                    <div class="flex">
-                        <div class="mr-6 text-primary font-semibold">2016-2020</div>
-                        <div>
-                            <h4 class="font-semibold text-lg">B.S. in Agronomy</h4>
-                            <p class="text-gray-600">China Agricultural University</p>
-                        </div>
+                <div id="education-list" class="space-y-4">
+                    <!-- Education content will be dynamically loaded -->
+                    <div class="flex justify-center">
+                        <div class="animate-spin rounded-full h-12 w-12 border-t-2 border-b-2 border-primary"></div>
                     </div>
                 </div>
             </div>
@@ -192,103 +186,9 @@
             </div>
             
             <!-- Publications List -->
-            <div class="max-w-4xl mx-auto space-y-4">
-                <!-- Publication 1 -->
-                <div class="bg-neutral rounded-xl p-5 hover:shadow-md transition-shadow">
-                    <p class="text-gray-800 text-sm leading-relaxed">
-                        Jiao, Chengzhi, <strong>Xiaoming Xie</strong>, Chenyang Hao, Liyang Chen, Yuxin Xie, Vanika Garg, Li Zhao, et al. 2025. "Pan-Genome Bridges Wheat Structural Variations with Habitat and Breeding." <em>Nature</em> 637(8045): 384–93. doi:10.1038/s41586-024-08277-0.
-                    </p>
-                </div>
-                
-                <!-- Publication 2 -->
-                <div class="bg-neutral rounded-xl p-5 hover:shadow-md transition-shadow">
-                    <p class="text-gray-800 text-sm leading-relaxed">
-                        Li, Renhan, Jie Liu, Lingling Chai, Dejie Du, Wen Yang, Jun Zhu, Yaotian Gao, et al. 2025. "Natural Variation in TaERF-A1 Confers Semi-Dwarf and Lodging-Resistant Plant Architecture in Wheat." <em>Plant Communications</em> 6(3). doi:10.1016/j.xplc.2024.101194.
-                    </p>
-                </div>
-                
-                <!-- Publication 3 -->
-                <div class="bg-neutral rounded-xl p-5 hover:shadow-md transition-shadow">
-                    <p class="text-gray-800 text-sm leading-relaxed">
-                        Mao, Weiwei, Xiaobo Wang, Yongming Chen, Yongfa Wang, Liang Ma, <strong>Xiaoming Xie</strong>, Xiaojia Wu, et al. 2025. "Map-Based Cloning and Characterization Reveal That an R2R3 MYB Gene Confers Red Glume in Wheat." <em>Crop Journal</em> 13(3): 887–99. doi:10.1016/j.cj.2024.03.002.
-                    </p>
-                </div>
-                
-                <!-- Publication 4 -->
-                <div class="bg-neutral rounded-xl p-5 hover:shadow-md transition-shadow">
-                    <p class="text-gray-800 text-sm leading-relaxed">
-                        Wang, Zihao, Wenxi Wang, Yachao He, <strong>Xiaoming Xie</strong>, Zhengzhao Yang, Xiaoyu Zhang, Jianxia Niu, et al. 2024. "On the Evolution and Genetic Diversity of the Bread Wheat D Genome." <em>Molecular Plant</em> 17(11): 1672–86. doi:10.1016/j.molp.2024.09.007.
-                    </p>
-                </div>
-                
-                <!-- Publication 5 -->
-                <div class="bg-neutral rounded-xl p-5 hover:shadow-md transition-shadow">
-                    <p class="text-gray-800 text-sm leading-relaxed">
-                        Wei, Wenxin, Nannan Liu, Shengnan Zhang, Jing Zhang, Wei Pan, <strong>Xiaoming Xie</strong>, Zuhuan Yang, et al. 2024. "Mapping of Powdery Mildew Resistance Genes Transferred to Common Wheat from Wild Emmer Wheat Revealed Three Functional Pm60 Haplotypes." <em>Crop Journal</em> 12(2): 540–48. doi:10.1016/j.cj.2024.01.015.
-                    </p>
-                </div>
-                
-                <!-- Publication 6 -->
-                <div class="bg-neutral rounded-xl p-5 hover:shadow-md transition-shadow">
-                    <p class="text-gray-800 text-sm leading-relaxed">
-                        Zhai, Huijie, Kunpeng Xu, Meng Wang, Zhenchuang Wang, Ziyang Cai, Ao Li, Anxin He, et al. 2025. "Development of Genome-Wide Unique Indel Markers for a Heat-Sensitive Genotype in Wheat (Triticum Aestivum L.)." <em>Agronomy</em> 15(1): 169. doi:10.3390/agronomy15010169.
-                    </p>
-                </div>
-                
-                <!-- Publication 7 -->
-                <div class="bg-neutral rounded-xl p-5 hover:shadow-md transition-shadow">
-                    <p class="text-gray-800 text-sm leading-relaxed">
-                        Chen, Yongming, Yiwen Guo, <strong>Xiaoming Xie</strong>, Zihao Wang, Lingfeng Miao, Zhengzhao Yang, Yuannian Jiao, et al. 2023. "Pangenome-Based Trajectories of Intracellular Gene Transfers in Poaceae Unveil High Cumulation in Triticeae." <em>Plant Physiology</em> 193(1): 578–94. doi:10.1093/plphys/kiad319.
-                    </p>
-                </div>
-                
-                <!-- Publication 8 -->
-                <div class="bg-neutral rounded-xl p-5 hover:shadow-md transition-shadow">
-                    <p class="text-gray-800 text-sm leading-relaxed">
-                        Ke, Wensheng, Jiewen Xing, Zhaoyan Chen, Yidi Zhao, Weiya Xu, Lulu Tian, Jinquan Guo, et al. 2023. "The TaTCP4/10–B1 Cascade Regulates Awn Elongation in Wheat (Triticum Aestivum L.)." <em>Plant Communications</em> 4(4): 100590. doi:10.1016/j.xplc.2023.100590.
-                    </p>
-                </div>
-                
-                <!-- Publication 9 -->
-                <div class="bg-neutral rounded-xl p-5 hover:shadow-md transition-shadow">
-                    <p class="text-gray-800 text-sm leading-relaxed">
-                        Li, Jinlong, Xin Xin, Fangyao Sun, Zhenzhen Zhu, Xiangru Xu, Jiatian Yang, <strong>Xiaoming Xie</strong>, et al. 2023. "Copy Number Variation of B1 Controls Awn Length in Wheat." <em>Crop Journal</em> 11(3): 817–24. doi:10.1016/j.cj.2022.10.007.
-                    </p>
-                </div>
-                
-                <!-- Publication 10 -->
-                <div class="bg-neutral rounded-xl p-5 hover:shadow-md transition-shadow">
-                    <p class="text-gray-800 text-sm leading-relaxed">
-                        Li, Xiongtao, Beilu Cao, Dejie Du, Long Song, Lulu Tian, <strong>Xiaoming Xie</strong>, Zhaoyan Chen, et al. 2023. "TaACTIN7-D Regulates Plant Height and Grain Shape in Bread Wheat." <em>Journal of Genetics and Genomics</em> 50(11): 895–908. doi:10.1016/j.jgg.2023.09.001.
-                    </p>
-                </div>
-                
-                <!-- Publication 11 -->
-                <div class="bg-neutral rounded-xl p-5 hover:shadow-md transition-shadow">
-                    <p class="text-gray-800 text-sm leading-relaxed">
-                        Wang, Zihao, Wenxi Wang, <strong>Xiaoming Xie</strong>, Yongfa Wang, Zhengzhao Yang, Huiru Peng, Mingming Xin, et al. 2022. "Dispersed Emergence and Protracted Domestication of Polyploid Wheat Uncovered by Mosaic Ancestral Haploblock Inference." <em>Nature Communications</em> 13(1): 3891. doi:10.1038/s41467-022-31581-0.
-                    </p>
-                </div>
-                
-                <!-- Publication 12 -->
-                <div class="bg-neutral rounded-xl p-5 hover:shadow-md transition-shadow">
-                    <p class="text-gray-800 text-sm leading-relaxed">
-                        Yang, Zhengzhao, Zihao Wang, Wenxi Wang, <strong>Xiaoming Xie</strong>, Lingling Chai, Xiaobo Wang, Xibo Feng, et al. 2022. "ggComp Enables Dissection of Germplasm Resources and Construction of a Multiscale Germplasm Network in Wheat." <em>Plant Physiology</em> 188(4): 1950–65. doi:10.1093/plphys/kiac029.
-                    </p>
-                </div>
-                
-                <!-- Publication 13 -->
-                <div class="bg-neutral rounded-xl p-5 hover:shadow-md transition-shadow">
-                    <p class="text-gray-800 text-sm leading-relaxed">
-                        Chen, Yongming, Wanjun Song, <strong>Xiaoming Xie</strong>, Zihao Wang, Panfeng Guan, Huiru Peng, Yuannian Jiao, et al. 2020. "A Collinearity-Incorporating Homology Inference Strategy for Connecting Emerging Assemblies in the Triticeae Tribe as a Pilot Practice in the Plant Pangenomic Era." <em>Molecular Plant</em> 13(12): 1694–1708. doi:10.1016/j.molp.2020.09.019.
-                    </p>
-                </div>
-                
-                <!-- Publication 14 -->
-                <div class="bg-neutral rounded-xl p-5 hover:shadow-md transition-shadow">
-                    <p class="text-gray-800 text-sm leading-relaxed">
-                        Liu, Jing, Zhaoyan Chen, Zhihui Wang, Zhaoheng Zhang, <strong>Xiaoming Xie</strong>, Zihao Wang, Lingling Chai, et al. 2021. "Ectopic Expression of VRT-A2 Underlies the Origin of Triticum Polonicum and Triticum Petropavlovskyi with Long Outer Glumes and Grains." <em>Molecular Plant</em> 14(9): 1472–88. doi:10.1016/j.molp.2021.05.021.
-                    </p>
+            <div id="publications-list" class="max-w-4xl mx-auto space-y-4">
+                <div class="flex justify-center">
+                    <div class="animate-spin rounded-full h-12 w-12 border-t-2 border-b-2 border-primary"></div>
                 </div>
             </div>
         </div>
@@ -305,20 +205,10 @@
                 </p>
             </div>
             
-            <div class="max-w-2xl mx-auto">
-                <div class="bg-white rounded-xl p-6 shadow-md">
-                    <div class="flex items-start">
-                        <div class="w-12 h-12 bg-accent/10 rounded-lg flex items-center justify-center mr-5 flex-shrink-0 mt-1">
-                            <i class="fa fa-users text-accent"></i>
-                        </div>
-                        <div>
-                            <h3 class="text-lg font-semibold mb-2">12th Member Congress and 21st Academic Annual Meeting of the Chinese Crop Science Society</h3>
-                            <p class="text-gray-600 mb-1">Taiyuan, Shanxi, China | September 2024</p>
-                            <p class="text-gray-700 text-sm">
-                                <span class="font-medium">Presentation Type:</span> Poster &amp; Oral Presentation
-                            </p>
-                        </div>
-                    </div>
+            <div id="conferences-list" class="max-w-2xl mx-auto space-y-4">
+                <!-- Conferences content will be dynamically loaded -->
+                <div class="flex justify-center">
+                    <div class="animate-spin rounded-full h-12 w-12 border-t-2 border-b-2 border-primary"></div>
                 </div>
             </div>
         </div>
