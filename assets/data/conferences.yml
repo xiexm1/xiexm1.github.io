@@ -17,3 +17,13 @@ conferences:
     presentations:
       - type: "Poster"
     icon: "users"
+    
+  - year: 2026
+    name: "The 4th International Wheat Congress"
+    location: "Bologna, Italy"
+    period: "May 2026"
+    type: "National Conference"
+    presentations:
+      - type: "Poster"
+      - type: "Selected short (5 min) talks"
+    icon: "users"
