@@ -88,12 +88,6 @@ This visualization consists of three main components.
 
 Select the desired evolutionary events (e.g., origin, duplication, loss) in the left panel. The species tree will update in real-time to highlight the lineages where these events occurred. After setting your criteria, click the `Search` button to retrieve a downloadable list of HOCs that match your filters.
 
-# NLR HOC
-
-![nlr-hoc](./assets/images/nlr-hoc.png)
-
-This page provides statistics for Homologous Gene Clusters containing Nucleotide-binding Leucine-rich repeat (NLR) genes (NLR-HOCs), particularly those corresponding to known cloned disease-resistance genes. Gene IDs are based on the IWGSC RefSeq v2.1 annotation.
-
 # MicroCollinearity
 
 waGOLD can visualize micro-collinearity for a specific HOC across multiple species.
