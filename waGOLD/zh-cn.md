@@ -26,7 +26,7 @@ waGOLD 提供交互式可视化、数据导出（PNG、SVG、PDF 和表格）以
 
 <img src="./assets/images/tutorial/02-species.webp" width="100%" alt="Species 页面标注图">
 
-**1. 物种系统发育树。** 树的拓扑来自 GoldMiner，展示数据库中 25 个禾本科基因组之间的关系。点击分支可筛选右侧表格。
+**1. 物种系统发育树。** 树的拓扑来自 GoldMiner，展示数据库中 25 个禾本科基因组之间的关系。点击分支或物种标签可筛选右侧表格。
 
 **2. 搜索框。** 可按物种名、基因组缩写或登录号过滤，例如 `Triticum` 或 `Traes`。
 

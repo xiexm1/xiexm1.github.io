@@ -26,7 +26,7 @@ Every `Example` button loads a valid default query. Use it to explore the output
 
 <img src="./assets/images/tutorial/02-species.webp" width="100%" alt="Annotated Species page">
 
-**1. Species phylogeny.** The tree is derived from GoldMiner and shows the relationships among the 25 Poaceae genomes. Click a branch to filter the table.
+**1. Species phylogeny.** The tree is derived from GoldMiner and shows the relationships among the 25 Poaceae genomes. Click a branch or species label to filter the table.
 
 **2. Search box.** Filter by species name, genome symbol or accession, for example `Triticum` or `Traes`.
 
