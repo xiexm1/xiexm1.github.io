@@ -16,16 +16,6 @@
 
 **6. Citation.** If you use GoldMiner or waGOLD in a publication, please cite the paper shown here.
 
-## Examples of Homologous Gene Clusters (HOCs)
-
-![examples-of-hoc](./assets/images/example-of-hoc.svg)
-
-The HOC identification process consists of three sequential steps:
-
-1. **Cluster identification within individual genomes (N=1):** Gene clusters are identified within each genome based on genomic proximity and sequence similarity. Genes are represented as colored shapes; identical colors indicate genes belonging to the same cluster.
-2. **Pairwise genome comparison (N=2):** HOCs are identified between pairs of genomes by connecting collinear genes. Matching colors and connecting lines indicate preserved gene order and orientation.
-3. **Multi-genome HOC construction (N ≥ 3):** Pairwise comparisons are integrated across multiple genomes. The resulting HOCs (HOC1–HOC9) represent evolutionarily conserved gene clusters. Grey shading marks the boundaries of each HOC.
-
 ## Note
 
 waGOLD provides interactive visualization, data export (PNG, SVG, PDF and tables), and links to external databases. Form-based tools use numbered steps. Most modules have an input area at the top and an output area below.
