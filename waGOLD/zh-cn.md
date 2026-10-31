@@ -1,116 +1,134 @@
 # General (概述)
 
-## waGOLD 主页
+## 快速开始：waGOLD 主页
 
-<!-- ![homepage](assets\images\waGOLD-homepage.png) -->
-<img src="./assets/images/waGOLD-homepage.png" width="100%" alt="homepage">
+<img src="./assets/images/tutorial/01-home.webp" width="100%" alt="waGOLD 主页标注图">
 
-**waGOLD**: **w**ebserver for the **a**tlas of **G**ene **O**rigin, **L**oss, and **D**uplication events in Poaceae (禾本科基因起源、丢失和复制事件图谱的在线数据库服务)。
+**1. 顶部导航栏。** 可直接进入 Species、Search、HOC distribution、Filter by Events、MicroCollinearity、Download 和 FAQ。
 
-**A**. 数据库的 Logo 和功能模块。
+**2. 主页标题区。** waGOLD 是一个交互式 webserver，用于研究禾本科物种中的基因起源、丢失和复制事件。
 
-**B**. 同源基因簇 (Homologous Gene Clusters, HOCs) 的定义。
+**3. What is a HOC?** 同源基因簇（Homologous Gene Cluster, HOC）的定义与示意图。
 
-**C**. 页脚显示了资助机构和网站访问统计。
+**4. Start exploring。** 六个功能卡片，每个卡片都预填了示例。可直接修改 ID 后点击按钮，打开对应页面并自动运行示例。
 
-## 同源基因簇 (HOCs) 示例
+**5. News。** 网站更新记录，包括 FastAPI 后端上线和论文接收信息。
+
+**6. Citation。** 如果使用 GoldMiner 或 waGOLD，请引用这里列出的论文。
+
+## 同源基因簇（HOCs）示例
+
 ![examples-of-hoc](./assets/images/example-of-hoc.svg)
 
-HOC 的鉴定过程包括三个连续的步骤：
-1.  **单个基因组内的簇鉴定 (N=1):** 在每个基因组内，基于基因组邻近性和序列相似性来鉴定基因簇。基因由不同颜色的形状表示，相同的颜色表示属于同一个簇的基因。
-2.  **成对基因组比较 (N=2):** 通过在共线性基因之间建立连接来鉴定成对基因组间的同源基因簇 (HOCs)。共线性由匹配的颜色和保持基因顺序及方向的连接线表示。
-3.  **多基因组 HOC 构建 (N ≥ 3):** 通过整合多个成对比较来构建跨多个基因组的 HOC。最终得到的 HOCs (HOC1-HOC9) 代表了在所分析的基因组中进化上保守的基因簇，每个 HOC 包含的基因都共享序列同源性并保持共线性的基因组组织结构。灰色阴影描绘了每个已鉴定 HOC 的边界。
+HOC 的鉴定过程包括三个连续步骤：
 
-## 注意
-此外，waGOLD 还提供多种功能，包括可视化、数据导出（支持 PDF、PNG 和 CSV 格式），以及到外部数据库的链接。所有工具都使用编号步骤（如 1, 2, 3）来引导用户完成输入过程。每个模块的布局都分为两个主要部分：输入区和输出区。
+1. **单基因组内的簇鉴定（N=1）：** 在每个基因组内，根据基因组邻近性和序列相似性鉴定基因簇。基因用不同颜色的形状表示，相同颜色表示属于同一个簇。
+2. **成对基因组比较（N=2）：** 通过在共线性基因之间建立连接，鉴定成对基因组间的同源基因簇。匹配的颜色和连接线表示基因顺序与方向得到保留。
+3. **多基因组 HOC 构建（N ≥ 3）：** 整合多个成对比较，构建跨基因组的 HOC。最终得到的 HOC（HOC1–HOC9）代表进化上保守的基因簇。灰色阴影标出每个 HOC 的边界。
 
-用户可以点击 `Example` (示例) 按钮加载默认数据以快速开始使用。
+## 说明
+
+waGOLD 提供交互式可视化、数据导出（PNG、SVG、PDF 和表格）以及外部数据库链接。表单工具使用编号步骤引导输入。大多数模块上方是输入区，下方是输出区。
+
+每个 `Example` 按钮都会填入一组有效示例。建议先运行示例，了解输出格式后再输入自己的 Gene ID 或 HOC ID。
 
 # Species (物种)
 
-![available-genomes](./assets/images/table1.webp)
+<img src="./assets/images/tutorial/02-species.webp" width="100%" alt="Species 页面标注图">
 
-左侧的系统发育树（来源于 Goldminer）展示了数据库中包含的基因组组装体之间的关系。右侧的表格提供了每个物种的详细信息，包括注释版本、基因组组装信息和参考文献。点击左侧系统发育树上的一个分支，右侧的表格将会根据您的点击，筛选并显示相应物种的可用基因组组装。
+**1. 物种系统发育树。** 树的拓扑来自 GoldMiner，展示数据库中 25 个禾本科基因组之间的关系。点击分支可筛选右侧表格。
+
+**2. 搜索框。** 可按物种名、基因组缩写或登录号过滤，例如 `Triticum` 或 `Traes`。
+
+**3. 基因组表格。** 显示物种、染色体组符号、组装统计、登录号和参考文献。
+
+**4. 分页控件。** 可翻页或调整每页显示行数。
 
 # Search (搜索)
 
-![search](./assets/images/waGOLD-search.png)
+<img src="./assets/images/tutorial/03-search-overview.webp" width="100%" alt="Search 页面查询与统计图标注">
 
-## 1. 按 HOC 或基因 ID 搜索
+**1. 按 HOC 或 Gene ID 搜索。** 输入 `HOC000121` 或 `TraesCS5B02G182000` 等 ID，然后点击 `Search`。
 
-在输入框中输入一个基因 ID 或 HOC ID，然后点击 `Search` (搜索) 按钮。该工具将检索指定 HOC 的基本信息，或指定基因所在的 HOC 的信息。搜索完成后，您可以通过点击相应的下载按钮，下载该 HOC 的数据，包括基因的 `Tables` (表格)、`CDS` (编码序列) 和 `Protein` (蛋白质序列)。
+**2. 进化轨迹摘要。** 根据 HOC 推断起源、复制和丢失事件，并根据成员基因给出可能的功能描述。
 
-## 2. HOC 中的基因
+**3. 功能注释。** 交互式饼图，显示 HOC 内基因的功能分类和比例。
 
-| Assembly | Chromosome | Counts | Gene ID |
-| :--- | :--- | :--- | :--- |
-| arinalrfor_chrNA | chr5A | 7 | TraesARI5A01G060500,TraesARI5A01G060600,TraesARI5A01G060400,TraesARI5A01G060800,TraesARI5A01G060700,TraesARI5A01G061000,TraesARI5A01G060900 |
-| jagger_chrNA | chr5A | 7 | TraesJAG5A01G061100,TraesJAG5A01G061600,TraesJAG5A01G061700,TraesJAG5A01G061200,TraesJAG5A01G061300,TraesJAG5A01G061400,TraesJAG5A01G061800 |
-| ... | ... | ... | ... |
+**4. 不同谱系的基因数。** 箱线图显示 HOC 基因数在各谱系中的分布。
 
-本节显示一个表格，其中包含 HOC 内每个物种的**组装 (Assembly)**、**染色体 (Chromosome)**、基因**数量 (Count)** 和**基因 ID (Gene IDs)**。要下载此数据，请点击表格上方的 `Tables` (表格) 按钮。
+**5. 进化树与共线性。** 该组合图包含：
+- **物种树（左）：** 末端数字是每个物种中的基因数；祖先节点数字是推断的祖先基因数。圆圈、方块、三角和叉号分别表示起源、复制、收缩和丢失事件。
+- **热图（中）：** 颜色越红表示基因数越多，灰色表示 0。
+- **微共线性图（右）：** 当前 HOC 的基因高亮显示，其他 HOC 的基因为灰色。点击任意基因可查看 Gene ID、HOC ID、基因组位置和功能描述。
 
-## 3. 不同谱系中的基因数量
+<img src="./assets/images/tutorial/03-search-table.webp" width="100%" alt="Search 结果表格标注">
 
-![boxplot](./assets/images/boxplot.png)
-
-该箱线图基于上表的数据，可视化了 HOC 内基因数量在不同物种谱系中的分布情况。
-
-## 4. HOC 的进化与功能分析
-
-![evo-func](./assets/images/evo-func.png)
-
-本节分为两部分。左侧是一段摘要，描述了该 HOC 推断的起源、复制和丢失事件，并根据其成员基因的功能注释，提供了该 HOC 的推定功能。右侧是一个交互式饼图，显示了 HOC 内基因功能的分类和比例。
-
-## 5. 起源、复制和丢失图
-
-![evo-col](./assets/images/evo-col.png)
-
-该可视化图由三个主要部分组成。
-*   **物种树 (左侧):** 最左侧面板显示了一个物种树。末端分支上的数字表示每个物种中该 HOC 的实际基因数量。祖先节点上的数字是使用动态规划算法推断的，代表了祖先谱系中估计的基因数量。树上的符号——圆圈 (`●`)、方块 (`■`) 和叉 (`X`)——分别代表起源、复制和丢失事件。
-*   **热图 (中间):** 中间面板是一个热图，用于可视化每个物种的基因数量。颜色越红表示基因数量越多，灰色表示数量为零。
-*   **微共线性图 (右侧):** 最右侧面板显示了每个对应物种中该 HOC 基因组区域的微共线性图。您可以点击任何一个基因（由五边形表示）。属于当前 HOC 的基因被涂成红色，而来自其他 HOC 的基因则为灰色。点击一个基因会显示其 ID、HOC ID、基因组位置和功能描述。
+**6. 各组装中的基因。** 表格列出谱系、组装、染色体、基因数和 Gene ID。表格上方按钮可下载表格、CDS 序列和蛋白序列。
 
 # HOC Distribution (HOC 分布)
 
-![hoc-dis](./assets/images/hoc-dis.webp)
+<img src="./assets/images/tutorial/04-distribution.webp" width="100%" alt="HOC distribution 页面标注">
 
-**步骤 1.** 输入一个 HOC ID。
+**1. 输入 HOC。** 例如 `HOC000001`。
 
-**步骤 2.** 从下拉菜单中选择一个参考基因组组装，以可视化 HOC 的分布。
+**2. 选择组装。** 选择要绘制分布的参考基因组组装。
 
-**步骤 3.** 点击 `Search` (搜索) 按钮运行分析。结果将显示在下方的输出区域。
+**3. Plot。** 点击 `Plot` 运行分析。
 
-**输出:** 在所选基因组组装的染色体上，指定 HOC 的基因组分布可视化图。
+**4. 输出。** 灰色条带表示所选组装的染色体；彩色区块表示 HOC 的位置和基因数。鼠标悬停可查看数量。
 
 # Filter by Events (按事件筛选)
 
-![filter-eve](./assets/images/filter-eve.webp)
+<img src="./assets/images/tutorial/05-filter.webp" width="100%" alt="Filter by Events 页面标注">
 
-在左侧面板中选择所需的进化事件（例如，起源、复制、丢失）。物种树将实时更新，以高亮显示发生这些事件的谱系。设置好标准后，点击 `Search` (搜索) 按钮，即可检索到一份与您的筛选条件匹配的 HOC 列表（可供下载）。
+**1. Original Node。** 单选：选择 HOC 起源的位置。
+
+**2. Duplication Node。** 多选：选择发生复制的谱系。
+
+**3. Shrink Node。** 多选：选择发生收缩的谱系。
+
+**4. Loss Node。** 多选：选择发生丢失的谱系。图中示例选择了 *Avena* 中的丢失事件。
+
+**5. 物种树。** 标记会随选择实时更新。点击标记可取消该选择。
+
+**6. Run。** 点击 `Run` 检索匹配的 HOC；`Clear all` 清空选择。
+
+**7. 结果。** 匹配的 HOC 按谱系和组装分组显示，可查看或下载结果表。
 
 # MicroCollinearity (微共线性)
 
-waGOLD 可以可视化特定 HOC 在多个物种间的微共线性。
+waGOLD 可以可视化一个 Gene ID 周围在多个禾本科组装之间的微共线性。
 
-![micro-col](./assets/images/micro-col.webp)
+<img src="./assets/images/tutorial/06-micro.webp" width="100%" alt="MicroCollinearity 页面标注">
 
-**步骤 1.** 输入一个查询基因 ID。
+**1. 输入 Gene ID。** 例如 `TraesCS7A02G540300`。
 
-**步骤 2.** 从下拉菜单中选择查询基因所在的参考基因组组装。
+**2. 包含该基因的组装。** 选择包含查询基因的参考组装。
 
-**步骤 3.** 从弹出窗口中选择一个或多个目标基因组组装进行比较。
+**3. 选择比较组装。** 勾选一个或多个比较组装。可使用 Wheat A/B/D、Barley、Rice、Maize 快捷按钮，也可在列表中过滤。
 
-**步骤 4.** (可选) 输入一个特定的染色体区域（格式：`chromosome:start-end`）进行高亮显示。
+**4. 参数与 GO。** 设置邻域基因数量，选择 `one-to-many` 和 `Real spacing`，然后点击 `GO`。
 
-**步骤 5.** 使用以下选项自定义可视化效果：
-1.  **One-to-many (一对多):** 选中后，将显示所有同源基因对。如果未选中，则只显示一对一的直系同源基因（例如，相互最佳匹配基因）。
-2.  **Real spacing (真实间距):** 选中后，基因将根据其在基因组上的实际坐标进行定位。如果未选中，基因将根据其排列顺序均匀分布。
+**5. 输出。** 图中显示基因和同源连接线。查询基因用红色高亮；连线颜色区分一对一和一对多关系。只有查询区域附近存在共线性区块的组装才会显示。点击任意基因可查看详情和外部链接。
 
-**步骤 6.** 点击 `GO` 按钮生成可视化图，该图将显示在下方的输出区域。
+# Download (下载)
 
-**输出:** 该图显示了基因以及代表同源基因对的连接线。这些基因对根据其关系类型（例如，RBH、SBH、singleton、一对多）进行着色。查询基因用红色三角形高亮显示。只有与查询区域存在共线性区块的基因组才会被显示。基因的进化历史可以从图的底部（外类群）追溯到顶部（较近的物种）。
+<img src="./assets/images/tutorial/07-download.webp" width="100%" alt="Download 页面标注">
 
-**注意:** 图中所有基因均可点击。点击基因会显示其 ID，并提供到外部表达数据库的链接。
+**1. 选择样本。** 从下拉框选择一个样本组装。
 
-![micro-colres](./assets/images/micro-colres.webp)
+**2. Download。** 下载该样本的 HOC / gene2clu2loc 表格。
+
+**3. Gene 或 HOC 查询。** 输入一个或多个 Gene ID 或 HOC ID，用 `;` 或 `,` 分隔，例如 `TraesCS5B02G182000;HOC000001`。
+
+**4. Search。** 运行查询。
+
+**5. 结果。** 结果表显示每个查询基因或 HOC 对应的谱系和组装。
+
+# Tips (提示)
+
+- 所有 `Example` 按钮都会填入有效示例，可直接运行。
+- 图表可导出为 PNG、SVG 或 PDF。点击 `Full` 可全屏查看。
+- 手机上密集图表可横向滑动。全屏后可手指拖动或用鼠标拖动平移。
+- 点击 `Full` 会尝试让支持的移动浏览器横屏；iOS 不支持自动横屏，请手动旋转设备。
+- 截图中的编号与上方步骤一一对应。

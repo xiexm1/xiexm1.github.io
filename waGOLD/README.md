@@ -1,115 +1,134 @@
 # General
 
-## Homepage of waGOLD
+## Quick start: the waGOLD homepage
 
-<img src="./assets/images/waGOLD-homepage.png" width="100%" alt="homepage">
+<img src="./assets/images/tutorial/01-home.webp" width="100%" alt="Annotated waGOLD homepage">
 
-**waGOLD**: **w**ebserver for the **a**tlas of **G**ene **O**rigin, **L**oss, and **D**uplication events in Poaceae.
+**1. Top navigation.** Jump directly to Species, Search, HOC distribution, Filter by Events, MicroCollinearity, Download and FAQ.
 
-**A**. The logo and functional modules of the database.
+**2. Homepage hero.** waGOLD is an interactive webserver for exploring gene birth-death dynamics — Gene Origin, Loss and Duplication — across Poaceae species.
 
-**B**. The definition of Homologous Gene Clusters (HOCs).
+**3. What is a HOC?** A short definition and schematic of a Homologous Gene Cluster (HOC).
 
-**C**. The footer displays sponsoring institutions and website visit statistics.
+**4. Start exploring.** Six functional cards, each with a prefilled example. Edit the ID if needed and click the action button to open the corresponding page with the example already running.
+
+**5. News.** Release notes, including the FastAPI backend update and paper acceptance.
+
+**6. Citation.** If you use GoldMiner or waGOLD in a publication, please cite the paper shown here.
 
 ## Examples of Homologous Gene Clusters (HOCs)
+
 ![examples-of-hoc](./assets/images/example-of-hoc.svg)
 
 The HOC identification process consists of three sequential steps:
-1.  **Cluster Identification within Individual Genomes (N=1):** Gene clusters are identified within each genome based on genomic proximity and sequence similarity. Genes are represented as colored shapes, with identical colors indicating genes belonging to the same cluster.
-2.  **Pairwise Genome Comparison (N=2):** Homologous Gene Clusters (HOCs) are identified between pairs of genomes by establishing connections between collinear genes. Collinearity is indicated by matching colors and connecting lines that preserve gene order and orientation.
-3.  **Multi-genome HOC Construction (N ≥ 3):** HOCs are constructed across multiple genomes by integrating pairwise comparisons. The resulting HOCs (HOC1-HOC9) represent evolutionarily conserved gene clusters present across the analyzed genomes, with each HOC containing genes that share sequence homology and maintain a syntenic genomic organization. Grey shading delineates the boundaries of each identified HOC.
+
+1. **Cluster identification within individual genomes (N=1):** Gene clusters are identified within each genome based on genomic proximity and sequence similarity. Genes are represented as colored shapes; identical colors indicate genes belonging to the same cluster.
+2. **Pairwise genome comparison (N=2):** HOCs are identified between pairs of genomes by connecting collinear genes. Matching colors and connecting lines indicate preserved gene order and orientation.
+3. **Multi-genome HOC construction (N ≥ 3):** Pairwise comparisons are integrated across multiple genomes. The resulting HOCs (HOC1–HOC9) represent evolutionarily conserved gene clusters. Grey shading marks the boundaries of each HOC.
 
 ## Note
-Additionally, waGOLD offers various functionalities for visualization, data export (in PDF, PNG, and CSV formats), and provides links to external databases. All tools use numbered steps (e.g., 1, 2, 3) to guide users through the input process. The layout of each module is divided into two main sections: an input area and an output area.
 
-Users can click the `Example` button to load default data and get started quickly.
+waGOLD provides interactive visualization, data export (PNG, SVG, PDF and tables), and links to external databases. Form-based tools use numbered steps. Most modules have an input area at the top and an output area below.
+
+Every `Example` button loads a valid default query. Use it to explore the output format before entering your own Gene ID or HOC ID.
 
 # Species
 
-![available-genomes](./assets/images/table1.webp)
+<img src="./assets/images/tutorial/02-species.webp" width="100%" alt="Annotated Species page">
 
-The phylogenetic tree on the left, derived from Goldminer, illustrates the relationships between the assemblies included in the database. The table on the right provides details for each species, including annotation versions, genome assembly information, and publication references. Clicking on a branch in the phylogenetic tree will filter the table on the right to display the available assemblies for the corresponding species.
+**1. Species phylogeny.** The tree is derived from GoldMiner and shows the relationships among the 25 Poaceae genomes. Click a branch to filter the table.
+
+**2. Search box.** Filter by species name, genome symbol or accession, for example `Triticum` or `Traes`.
+
+**3. Genome table.** Displays species, chromosome-group symbols, assembly statistics, accessions and publication references.
+
+**4. Pagination.** Change the page size or page through the table.
 
 # Search
 
-![search](./assets/images/waGOLD-search.png)
+<img src="./assets/images/tutorial/03-search-overview.webp" width="100%" alt="Annotated Search page: query and summary charts">
 
-## 1. Search by HOC or Gene ID
+**1. Search by HOC or Gene ID.** Enter a HOC ID such as `HOC000121`, or a Gene ID such as `TraesCS5B02G182000`, and press `Search`.
 
-Enter a gene ID or HOC ID into the input box and click the `Search` button. The tool will retrieve basic information for the specified HOC or the HOC containing the specified gene. After the search is complete, you can download the HOC data, which includes gene `Tables`, `CDS` sequences, and `Protein` sequences, by clicking the respective download buttons.
+**2. Evolutionary track.** A text summary of the inferred origin, duplication and loss events for the HOC, plus a putative function derived from member genes.
 
-## 2. Genes in the HOC
+**3. Function annotation.** Interactive pie chart showing the functional classification and proportions of genes in the HOC.
 
-| Assembly | Chromosome | Counts | Gene ID |
-| :--- | :--- | :--- | :--- |
-| arinalrfor_chrNA | chr5A | 7 | TraesARI5A01G060500,TraesARI5A01G060600,TraesARI5A01G060400,TraesARI5A01G060800,TraesARI5A01G060700,TraesARI5A01G061000,TraesARI5A01G060900 |
-| jagger_chrNA | chr5A | 7 | TraesJAG5A01G061100,TraesJAG5A01G061600,TraesJAG5A01G061700,TraesJAG5A01G061200,TraesJAG5A01G061300,TraesJAG5A01G061400,TraesJAG5A01G061800 |
-| ... | ... | ... | ... |
+**4. Gene counts in different lineages.** Box plots showing the distribution of gene counts across lineages.
 
-This section displays a table containing the **Assembly**, **Chromosome**, the **Count** of genes, and the **Gene IDs** for each species within the HOC. To download this data, click the `Tables` button located above the table.
+**5. Evolutionary tree and collinearity.** This combined chart contains:
+- **Species tree (left):** terminal numbers are gene counts in each species; ancestral numbers are inferred counts. Circles, squares, triangles and crosses mark origin, duplication, shrink and loss events.
+- **Heatmap (middle):** deeper red means more genes; grey means zero.
+- **Micro-collinearity plot (right):** genes of the current HOC are highlighted; other HOCs are grey. Click any gene to show its Gene ID, HOC ID, genomic location and functional description.
 
-## 3. Gene Counts in Different Lineages
+<img src="./assets/images/tutorial/03-search-table.webp" width="100%" alt="Annotated Search results table">
 
-![boxplot](./assets/images/boxplot.png)
-
-This box plot visualizes the distribution of gene counts within the HOC across different species lineages, based on the data from the table above.
-
-## 4. Evolutionary and Functional Analysis of the HOC
-
-![evo-func](./assets/images/evo-func.png)
-
-This section is divided into two parts. On the left, a summary describes the inferred origin, duplication, and loss events for the HOC. It also provides a putative function for the HOC, derived from the functional annotations of its member genes. On the right, an interactive pie chart displays the classification and proportions of gene functions within the HOC.
-
-## 5. Origin, Duplication, and Loss Plot
-
-![evo-col](./assets/images/evo-col.png)
-
-This visualization consists of three main components.
-*   **Species Tree (Left):** The leftmost panel displays a species tree. The numbers on the terminal branches indicate the actual count of genes in the HOC for each species. The numbers at the ancestral nodes, inferred using a dynamic programming algorithm, represent the estimated gene counts in ancestral lineages. Symbols on the tree—circles (`●`), squares (`■`), and crosses (`X`)—represent origin, duplication, and loss events, respectively.
-*   **Heatmap (Center):** The central panel is a heatmap that visualizes the gene count for each species. A deeper red color indicates a higher number of genes, while gray indicates a count of zero.
-*   **Micro-collinearity Plot (Right):** The rightmost panel shows a micro-collinearity plot for the genomic region of the HOC in each corresponding species. You can click on any gene (represented by a pentagon). Genes belonging to the current HOC are colored red, while those from other HOCs are gray. Clicking a gene reveals its ID, HOC ID, genomic location, and functional description.
+**6. Genes in each assembly.** The table lists lineage, assembly, chromosome, gene count and Gene IDs. Download buttons above the table export the table, CDS sequences and protein sequences.
 
 # HOC Distribution
 
-![hoc-dis](./assets/images/hoc-dis.webp)
+<img src="./assets/images/tutorial/04-distribution.webp" width="100%" alt="Annotated HOC distribution page">
 
-**Step 1.** Enter an HOC ID.
+**1. Insert a HOC.** Enter a HOC ID, for example `HOC000001`.
 
-**Step 2.** Select a reference assembly from the dropdown menu to visualize the HOC distribution.
+**2. Select an assembly.** Choose the reference assembly in which the distribution will be drawn.
 
-**Step 3.** Click the `Search` button to run the analysis. The results will be displayed in the output area below.
+**3. Plot.** Click `Plot` to run the analysis.
 
-**Output:** A visualization of the genomic distribution of the specified HOC on the chromosomes of the selected assembly.
+**4. Output.** Chromosomes of the selected assembly are drawn as grey bars. Colored blocks show the position and gene count of the selected HOC. Hover over a block to see its count.
 
 # Filter by Events
 
-![filter-eve](./assets/images/filter-eve.webp)
+<img src="./assets/images/tutorial/05-filter.webp" width="100%" alt="Annotated Filter by Events page">
 
-Select the desired evolutionary events (e.g., origin, duplication, loss) in the left panel. The species tree will update in real-time to highlight the lineages where these events occurred. After setting your criteria, click the `Search` button to retrieve a downloadable list of HOCs that match your filters.
+**1. Original Node.** Single-select: choose where the HOC originated.
+
+**2. Duplication Node.** Multi-select: choose lineages in which duplication occurred.
+
+**3. Shrink Node.** Multi-select: choose lineages in which the HOC shrank.
+
+**4. Loss Node.** Multi-select: choose lineages in which the HOC was lost. The annotated example selects Loss in *Avena*.
+
+**5. Species tree.** Markers update in real time at the selected evolutionary positions. Click a marker to remove that selection.
+
+**6. Run.** Click `Run` to retrieve matching HOCs. `Clear all` resets the selection.
+
+**7. Results.** Matching HOCs are grouped by lineage and assembly. Use the table controls to review or download the result.
 
 # MicroCollinearity
 
-waGOLD can visualize micro-collinearity for a specific HOC across multiple species.
+waGOLD can visualize micro-collinearity around a Gene ID across multiple Poaceae assemblies.
 
-![micro-col](./assets/images/micro-col.webp)
+<img src="./assets/images/tutorial/06-micro.webp" width="100%" alt="Annotated MicroCollinearity page">
 
-**Step 1.** Enter a query gene ID.
+**1. Input a Gene ID.** Enter the query gene, for example `TraesCS7A02G540300`.
 
-**Step 2.** Select the reference assembly for the query gene from the dropdown menu.
+**2. Assembly containing the gene.** Select the reference assembly that contains the query gene.
 
-**Step 3.** Select one or more target assemblies for comparison from the pop-up window.
+**3. Select assemblies.** Pick one or more comparison assemblies. Quick-select buttons are available for Wheat A/B/D, Barley, Rice and Maize. The list can be filtered.
 
-**Step 4.** (Optional) Input a number of neighboring genes.
+**4. Options and GO.** Set the number of neighboring genes, toggle `one-to-many` and `Real spacing`, then click `GO`.
 
-**Step 5.** Customize the visualization with the following options:
-1.  **One-to-many:** When selected, all homologous gene pairs are displayed. If unselected, only one-to-one orthologs (e.g., Reciprocal Best Hits) are shown.
-2.  **Real spacing:** When selected, genes are positioned according to their actual genomic coordinates. If unselected, genes are spaced evenly according to their rank order.
+**5. Output.** The plot shows genes and homologous links. The query gene is highlighted in red. Link colors distinguish one-to-one and one-to-many relationships. Only assemblies with a collinear block around the query region are displayed. Click any gene for details and external links.
 
-**Step 6.** Click the `GO` button to generate the visualization, which will appear in the output area below.
+# Download
 
-**Output:** The plot displays genes and the connecting lines that represent homologous pairs. These pairs are colored based on their relationship type (e.g., RBH, SBH, singleton, one-to-many). The query gene is highlighted with a red triangle. Only genomes containing a collinear block with the query region will be displayed. The evolutionary history of the genes can be traced from the bottom (outgroup) to the top (more recent species) of the plot.
+<img src="./assets/images/tutorial/07-download.webp" width="100%" alt="Annotated Download page">
 
-**Note:** All genes in the plot are clickable. Clicking a gene will display its ID and provide links to external expression databases.
+**1. Choose a sample.** Select a sample assembly from the dropdown.
 
-![micro-colres](./assets/images/micro-colres.webp)
+**2. Download.** Download its HOC / gene2clu2loc table.
+
+**3. Gene or HOC lookup.** Enter one or more Gene IDs or HOC IDs separated by `;` or `,`, for example `TraesCS5B02G182000;HOC000001`.
+
+**4. Search.** Run the lookup.
+
+**5. Results.** The result table shows the lineage and assembly containing each queried gene or HOC.
+
+# Tips
+
+- All `Example` buttons load valid data and can be run immediately.
+- Charts can be exported as PNG, SVG or PDF. Use `Full` to open a chart full screen.
+- On phones, dense charts can be swiped horizontally. In full-screen mode, drag with a finger or mouse to pan.
+- Clicking `Full` also attempts to rotate compatible mobile browsers to landscape. On iOS, rotate the device manually.
+- All annotation numbers in the screenshots correspond to the numbered steps above.
