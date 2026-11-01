@@ -44,7 +44,7 @@ waGOLD 提供交互式可视化、数据导出（PNG、SVG、PDF 和表格）以
 
 **2. 进化轨迹摘要。** 根据 HOC 推断起源、复制和丢失事件，并根据成员基因给出可能的功能描述。
 
-**查询 Note。** 结果上方会显示 `Note`，记录你输入的原始内容、系统自动转换或用户手动选择的基因、解析后的 Gene ID 和组装、对应的 HOC，以及运行状态。可用于确认 `Rht2` 等 symbol 是否匹配到了预期的基因。
+**查询 Alert。** 结果上方会显示绿色 Info Alert（`ⓘ Search resolved`），记录原始输入、精确匹配 / 模糊匹配 / 用户选择、解析后的 Gene ID 和组装、对应的 HOC，以及运行状态。例如：`Query RHT2 was fuzzy matched to Os01g0508500 (RH2) via fuzzy search.` 可用于确认 `Rht2` 等 symbol 是否匹配到了预期的基因。
 
 **3. 功能注释。** 交互式饼图，显示 HOC 内基因的功能分类和比例。
 
@@ -126,11 +126,15 @@ Search、MicroCollinearity 和 Download 页面除 Gene ID、HOC ID 外，也支�
 <img src="./assets/images/tutorial/08-gene-symbol-picker.webp" width="100%" alt="多个匹配时的基因 symbol 选择窗口">
 
 - 输入 `Vrn1`、`Rht-A1`、`TaAPO-A1` 等基因名。
-- 如果只有一个唯一匹配，waGOLD 会自动转换为对应 Gene ID 并执行查询。
-- 如果有多个匹配，会列出候选基因的 Gene ID、物种和组装，选择后继续。
+- 如果只有一个强匹配（精确、前缀或子串），waGOLD 会自动转换为对应 Gene ID 并执行查询。
+- 如果有多个匹配，会列出候选基因的 Gene ID、物种、组装和匹配类型，选择后继续。
+- 只有模糊匹配时不会自动运行，而是先让用户确认。例如 `Rht2` 需要确认后才使用水稻 `RH2`。
 - 已存在的 Gene ID 和 HOC ID 会原样传递，不会误转换。
 - 在 MicroCollinearity 中，如果选择的基因属于其他物种，会自动切换到对应的参考组装。
 - Download 支持用 `;` 或 `,` 分隔多个 symbol，查询前会逐个解析。
+- symbol 索引包含水稻、玉米、拟南芥映射，小麦 symbol 表，以及整理的小麦已知基因表 `kngene@zhangyq.csv`。
+
+<img src="./assets/images/tutorial/09-fuzzy-match-confirm.webp" width="100%" alt="模糊匹配需要用户确认">
 
 # Tips (提示)
 

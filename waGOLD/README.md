@@ -44,7 +44,7 @@ Every `Example` button loads a valid default query. Use it to explore the output
 
 **2. Evolutionary track.** A text summary of the inferred origin, duplication and loss events for the HOC, plus a putative function derived from member genes.
 
-**Query note.** Above the results, the `Note` banner records what you entered, automatic symbol conversion or manual selection, the resolved Gene ID and assembly, the resolved HOC, and the query status. Use it to verify that a symbol such as `Rht2` resolved to the gene you expected.
+**Query alert.** Above the results, a green Info alert (`ⓘ Search resolved`) records what you entered, whether it was an exact match, fuzzy match or user selection, the resolved Gene ID and assembly, the resolved HOC, and the query status. For example, `Query RHT2 was fuzzy matched to Os01g0508500 (RH2) via fuzzy search.` Use it to verify that a symbol such as `Rht2` resolved to the gene you expected.
 
 **3. Function annotation.** Interactive pie chart showing the functional classification and proportions of genes in the HOC.
 
@@ -126,11 +126,15 @@ Search, MicroCollinearity and Download accept gene symbols in addition to Gene I
 <img src="./assets/images/tutorial/08-gene-symbol-picker.webp" width="100%" alt="Gene symbol picker with multiple matches">
 
 - Type a symbol such as `Vrn1`, `Rht-A1` or `TaAPO-A1`.
-- If there is one unique match, waGOLD converts it to the corresponding Gene ID automatically and runs the query.
-- If several genes match, a picker lists every candidate with its Gene ID, species and assembly. Choose one to continue.
+- If there is one strong, unambiguous match (exact, prefix or substring), waGOLD converts it to the corresponding Gene ID automatically and runs the query.
+- If several genes match, a picker lists every candidate with its Gene ID, species, assembly and match type. Choose one to continue.
+- A single fuzzy-only match is shown for confirmation instead of running automatically. For example, `Rht2` requires confirmation before using rice `RH2`.
 - Existing Gene IDs and HOC IDs are passed through unchanged.
 - In MicroCollinearity, choosing a gene from another species automatically switches the reference assembly when possible.
 - Download accepts multiple symbols separated by `;` or `,`; each one is resolved before the lookup.
+- The symbol index includes rice, maize and Arabidopsis mappings, the wheat symbol table, and the curated wheat known-gene table `kngene@zhangyq.csv`.
+
+<img src="./assets/images/tutorial/09-fuzzy-match-confirm.webp" width="100%" alt="Fuzzy gene symbol match confirmation">
 
 # Tips
 
