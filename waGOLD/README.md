@@ -44,6 +44,8 @@ Every `Example` button loads a valid default query. Use it to explore the output
 
 **2. Evolutionary track.** A text summary of the inferred origin, duplication and loss events for the HOC, plus a putative function derived from member genes.
 
+**Query note.** Above the results, the `Note` banner records what you entered, automatic symbol conversion or manual selection, the resolved Gene ID and assembly, the resolved HOC, and the query status. Use it to verify that a symbol such as `Rht2` resolved to the gene you expected.
+
 **3. Function annotation.** Interactive pie chart showing the functional classification and proportions of genes in the HOC.
 
 **4. Gene counts in different lineages.** Box plots showing the distribution of gene counts across lineages.
