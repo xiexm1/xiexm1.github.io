@@ -6,15 +6,17 @@
 
 **1. 顶部导航栏。** 可直接进入 Species、Search、HOC distribution、Filter by Events、MicroCollinearity、Download 和 FAQ。
 
-**2. 主页标题区。** waGOLD 是一个交互式 webserver，用于研究禾本科物种中的基因起源、丢失和复制事件。
+**2. 主页标题区。** 顶部标签为 **Pan-genus HOC Atlas**。waGOLD 是一个交互式 webserver，用于研究禾本科物种中的基因起源、丢失和复制事件。
 
 **3. What is a HOC?** 同源基因簇（Homologous Gene Cluster, HOC）的定义与示意图。
 
 **4. Start exploring。** 六个功能卡片，每个卡片都预填了示例。可直接修改 ID 后点击按钮，打开对应页面并自动运行示例。
 
-**5. News。** 网站更新记录，包括 FastAPI 后端上线和论文接收信息。
+**5. TGT 链接。** 跳转到配套的 TGT（Triticeae Gene Tribe）数据库。
 
-**6. Citation。** 如果使用 GoldMiner 或 waGOLD，请引用这里列出的论文。
+**6. News。** 网站更新记录，包括 FastAPI 后端上线和论文接收信息。
+
+**7. Citation。** 如果使用 GoldMiner 或 waGOLD，请引用这里列出的论文。
 
 ## 说明
 

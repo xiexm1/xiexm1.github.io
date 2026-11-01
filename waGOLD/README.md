@@ -6,15 +6,17 @@
 
 **1. Top navigation.** Jump directly to Species, Search, HOC distribution, Filter by Events, MicroCollinearity, Download and FAQ.
 
-**2. Homepage hero.** waGOLD is an interactive webserver for exploring gene birth-death dynamics — Gene Origin, Loss and Duplication — across Poaceae species.
+**2. Homepage hero.** The eyebrow reads **Pan-genus HOC Atlas**. waGOLD is an interactive webserver for exploring gene birth-death dynamics — Gene Origin, Loss and Duplication — across Poaceae species.
 
 **3. What is a HOC?** A short definition and schematic of a Homologous Gene Cluster (HOC).
 
 **4. Start exploring.** Six functional cards, each with a prefilled example. Edit the ID if needed and click the action button to open the corresponding page with the example already running.
 
-**5. News.** Release notes, including the FastAPI backend update and paper acceptance.
+**5. TGT link.** Opens the companion TGT (Triticeae Gene Tribe) database.
 
-**6. Citation.** If you use GoldMiner or waGOLD in a publication, please cite the paper shown here.
+**6. News.** Release notes, including the FastAPI backend update and paper acceptance.
+
+**7. Citation.** If you use GoldMiner or waGOLD in a publication, please cite the paper shown here.
 
 ## Note
 
