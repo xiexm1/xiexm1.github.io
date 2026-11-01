@@ -117,6 +117,19 @@ waGOLD 可以可视化一个 Gene ID 周围在多个禾本科组装之间的微�
 
 **5. 结果。** 结果表显示每个查询基因或 HOC 对应的谱系和组装。
 
+# Gene symbol 搜索
+
+Search、MicroCollinearity 和 Download 页面除 Gene ID、HOC ID 外，也支持基因 symbol。
+
+<img src="./assets/images/tutorial/08-gene-symbol-picker.webp" width="100%" alt="多个匹配时的基因 symbol 选择窗口">
+
+- 输入 `Vrn1`、`Rht-A1`、`TaAPO-A1` 等基因名。
+- 如果只有一个唯一匹配，waGOLD 会自动转换为对应 Gene ID 并执行查询。
+- 如果有多个匹配，会列出候选基因的 Gene ID、物种和组装，选择后继续。
+- 已存在的 Gene ID 和 HOC ID 会原样传递，不会误转换。
+- 在 MicroCollinearity 中，如果选择的基因属于其他物种，会自动切换到对应的参考组装。
+- Download 支持用 `;` 或 `,` 分隔多个 symbol，查询前会逐个解析。
+
 # Tips (提示)
 
 - 所有 `Example` 按钮都会填入有效示例，可直接运行。
