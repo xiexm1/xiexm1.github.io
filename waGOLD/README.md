@@ -117,6 +117,19 @@ waGOLD can visualize micro-collinearity around a Gene ID across multiple Poaceae
 
 **5. Results.** The result table shows the lineage and assembly containing each queried gene or HOC.
 
+# Gene symbol search
+
+Search, MicroCollinearity and Download accept gene symbols in addition to Gene IDs and HOC IDs.
+
+<img src="./assets/images/tutorial/08-gene-symbol-picker.webp" width="100%" alt="Gene symbol picker with multiple matches">
+
+- Type a symbol such as `Vrn1`, `Rht-A1` or `TaAPO-A1`.
+- If there is one unique match, waGOLD converts it to the corresponding Gene ID automatically and runs the query.
+- If several genes match, a picker lists every candidate with its Gene ID, species and assembly. Choose one to continue.
+- Existing Gene IDs and HOC IDs are passed through unchanged.
+- In MicroCollinearity, choosing a gene from another species automatically switches the reference assembly when possible.
+- Download accepts multiple symbols separated by `;` or `,`; each one is resolved before the lookup.
+
 # Tips
 
 - All `Example` buttons load valid data and can be run immediately.
