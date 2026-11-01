@@ -10,7 +10,7 @@
 
 **3. What is a HOC?** 同源基因簇（Homologous Gene Cluster, HOC）的定义与示意图。
 
-**4. Start exploring。** 六个功能卡片，每个卡片都预填了示例。可直接修改 ID 后点击按钮，打开对应页面并自动运行示例。
+**4. Start exploring。** 六个功能卡片，每个卡片都预填了示例（Gene ID、HOC ID 或基因 symbol）。可直接修改后点击按钮，打开对应页面并自动运行示例。
 
 **5. TGT 链接。** 跳转到配套的 TGT（Triticeae Gene Tribe）数据库。
 

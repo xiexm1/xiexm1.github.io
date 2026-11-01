@@ -10,7 +10,7 @@
 
 **3. What is a HOC?** A short definition and schematic of a Homologous Gene Cluster (HOC).
 
-**4. Start exploring.** Six functional cards, each with a prefilled example. Edit the ID if needed and click the action button to open the corresponding page with the example already running.
+**4. Start exploring.** Six functional cards, each with a prefilled example (Gene ID, HOC ID or gene symbol). Edit the value if needed and click the action button to open the corresponding page with the example already running.
 
 **5. TGT link.** Opens the companion TGT (Triticeae Gene Tribe) database.
 
