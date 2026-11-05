@@ -132,7 +132,7 @@ Search、MicroCollinearity 和 Download 页面除 Gene ID、HOC ID 外，也支�
 - 已存在的 Gene ID 和 HOC ID 会原样传递，不会误转换。
 - 在 MicroCollinearity 中，如果选择的基因属于其他物种，会自动切换到对应的参考组装。
 - Download 支持用 `;` 或 `,` 分隔多个 symbol，查询前会逐个解析。
-- symbol 索引包含水稻、玉米、拟南芥映射，小麦 symbol 表，以及整理的小麦已知基因表 `kngene@zhangyq.csv`。
+- symbol 索引数据来自 TGT 和 GeneCard（未发表数据库）。
 
 <img src="./assets/images/tutorial/09-fuzzy-match-confirm.webp" width="100%" alt="模糊匹配需要用户确认">
 

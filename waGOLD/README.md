@@ -132,7 +132,7 @@ Search, MicroCollinearity and Download accept gene symbols in addition to Gene I
 - Existing Gene IDs and HOC IDs are passed through unchanged.
 - In MicroCollinearity, choosing a gene from another species automatically switches the reference assembly when possible.
 - Download accepts multiple symbols separated by `;` or `,`; each one is resolved before the lookup.
-- The symbol index includes rice, maize and Arabidopsis mappings, the wheat symbol table, and the curated wheat known-gene table `kngene@zhangyq.csv`.
+- The symbol index data comes from TGT and GeneCard (unpublished database).
 
 <img src="./assets/images/tutorial/09-fuzzy-match-confirm.webp" width="100%" alt="Fuzzy gene symbol match confirmation">
 
